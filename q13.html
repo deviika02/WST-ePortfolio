@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Q13</title>
+</head>
+
+<body>
+
+<h1>Q13 - JSON Read</h1>
+
+<pre>
+
+->user.json
+
+[
+  {
+    "name": "Devika",
+    "age": 21,
+    "skills": ["HTML", "JavaScript"]
+  },
+  {
+    "name": "Sam",
+    "age": 22,
+    "skills": ["CSS", "Python"]
+  }
+]
+
+->index.html (JavaScript to read JSON)
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Read JSON</title>
+</head>
+
+<body>
+
+<h2>Open Console to see output</h2>
+
+<script>
+fetch('user.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+
+    data.forEach(user => {
+      console.log("Name:", user.name);
+      console.log("Age:", user.age);
+      console.log("Skills:", user.skills.join(", "));
+      console.log("------------------");
+    });
+  })
+  .catch(error => console.error("Error:", error));
+</script>
+
+</body>
+</html>
+
+</pre>
+
+<a href="wstlabbook.html">Back</a>
+
+</body>
+</html>
