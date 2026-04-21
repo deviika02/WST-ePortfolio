@@ -1,0 +1,24 @@
+<form onsubmit="return validate()">
+Patient ID: <input type="text"><br>
+Name: <input type="text" id="name"><br>
+Address: <input type="text"><br>
+City: <input type="text"><br>
+Aadhar: <input type="text"><br>
+Contact: <input type="text"><br>
+Email: <input type="text"><br>
+Blood Group: <input type="text"><br>
+DOB: <input type="date"><br>
+<input type="submit">
+</form>
+
+<script>
+function validate()
+{
+let name = document.getElementById("name").value;
+if(name=="")
+{
+alert("Name required");
+return false;
+}
+}
+</script>
