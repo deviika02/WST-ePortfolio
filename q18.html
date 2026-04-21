@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Q18</title>
+</head>
+
+<body>
+
+<h1>Q18 - Functions</h1>
+
+<pre>
+
+// Student data
+const students = [
+  { name: "Devika", marks: 80 },
+  { name: "Sam", marks: 70 },
+  { name: "John", marks: 90 }
+];
+
+// Function to print all students
+function getAllStudents() {
+  console.log("All Students:");
+  students.forEach(s => {
+    console.log(s.name, "-", s.marks);
+  });
+}
+
+// Function to find student by name
+function getStudentByName(name) {
+  const student = students.find(s => s.name === name);
+
+  if (student) {
+    console.log("Student Found:", student.name, "-", student.marks);
+  } else {
+    console.log("Student not found");
+  }
+}
+
+// Function to calculate average marks
+function getAverageMarks() {
+  let total = students.reduce((sum, s) => sum + s.marks, 0);
+  let avg = total / students.length;
+
+  console.log("Average Marks:", avg);
+}
+
+// Call all functions
+getAllStudents();
+getStudentByName("Devika");
+getAverageMarks();
+
+</pre>
+
+<a href="wstlabbook.html">Back</a>
+
+</body>
+</html>
