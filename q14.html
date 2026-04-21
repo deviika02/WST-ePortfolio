@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Q14</title>
+</head>
+
+<body>
+
+<h1>Q14 - fs.readFile()</h1>
+
+<pre>
+
+->data.json
+
+{
+  "products": [
+    { "name": "Mobile", "price": 20000 },
+    { "name": "Laptop", "price": 50000 },
+    { "name": "TV", "price": 30000 }
+  ]
+}
+
+->app.js
+
+const fs = require('fs');
+
+// Read file asynchronously
+fs.readFile('data.json', 'utf8', (err, data) => {
+
+  // Error handling
+  if (err) {
+    console.error("Error reading file:", err);
+    return;
+  }
+
+  // Convert JSON string to object
+  const obj = JSON.parse(data);
+
+  // Display product names
+  console.log("Product List:");
+  obj.products.forEach(product => {
+    console.log(product.name);
+  });
+
+});
+
+</pre>
+
+<a href="wstlabbook.html">Back</a>
+
+</body>
+</html>
