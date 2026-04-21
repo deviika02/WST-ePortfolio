@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Q16</title>
+</head>
+
+<body>
+
+<h1>Q16 - writeFileSync()</h1>
+
+<pre>
+
+const fs = require('fs');
+
+// Create student data
+const students = [
+  { name: "Devika", age: 21, course: "MCA" },
+  { name: "Sam", age: 22, course: "BCA" }
+];
+
+// Convert to JSON string
+const data = JSON.stringify(students, null, 2);
+
+// Write file synchronously
+fs.writeFileSync('students.json', data);
+
+// Verify file creation
+console.log("students.json file created successfully!");
+
+</pre>
+
+<a href="wstlabbook.html">Back</a>
+
+</body>
+</html>
