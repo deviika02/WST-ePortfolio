@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Q15</title>
+</head>
+
+<body>
+
+<h1>Q15 - require()</h1>
+
+<pre>
+
+->user.json
+
+[
+  {
+    "name": "Devika",
+    "age": 21,
+    "skills": ["HTML", "JavaScript"]
+  },
+  {
+    "name": "Sam",
+    "age": 22,
+    "skills": ["CSS", "Python"]
+  },
+  {
+    "name": "John",
+    "age": 23,
+    "skills": ["Java", "C++"]
+  }
+]
+
+->app.js
+
+// Read JSON file using require
+const users = require('./user.json');
+
+// Print user details
+console.log("User Details:");
+users.forEach(user => {
+  console.log("Name:", user.name);
+  console.log("Age:", user.age);
+  console.log("Skills:", user.skills.join(", "));
+  console.log("------------------");
+});
+
+// Convert JS object to JSON string
+let jsonString = JSON.stringify(users);
+
+console.log("JSON String:");
+console.log(jsonString);
+
+</pre>
+
+<a href="wstlabbook.html">Back</a>
+
+</body>
+</html>
