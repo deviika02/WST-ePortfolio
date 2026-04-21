@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Q17</title>
+</head>
+
+<body>
+
+<h1>Q17 - Count Students</h1>
+
+<pre>
+
+->students.json
+
+[
+  { "name": "Devika", "age": 21 },
+  { "name": "Sam", "age": 22 },
+  { "name": "John", "age": 23 }
+]
+
+->app.js
+
+const fs = require('fs');
+
+// Read file asynchronously
+fs.readFile('students.json', 'utf8', (err, data) => {
+
+  // Handle error
+  if (err) {
+    console.error("Error reading file:", err);
+    return;
+  }
+
+  // Parse JSON string
+  const students = JSON.parse(data);
+
+  // Display total number of students
+  console.log("Total Students:", students.length);
+
+});
+
+</pre>
+
+<a href="wstlabbook.html">Back</a>
+
+</body>
+</html>
