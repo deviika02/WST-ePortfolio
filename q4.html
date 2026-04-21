@@ -1,0 +1,17 @@
+<form onsubmit="return validate()">
+Consumer Name: <input type="text"><br>
+Units: <input type="number" id="units"><br>
+<input type="submit">
+</form>
+
+<script>
+function validate()
+{
+var units=document.getElementById("units").value;
+if(units<=0)
+{
+alert("Enter valid units");
+return false;
+}
+}
+</script>
